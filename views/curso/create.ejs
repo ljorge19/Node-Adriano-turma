@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include ../includes/head %>
+</head>
+<body>
+  <% include ../includes/menu %>
+
+  
+<div class="container" style="margin-top: 90px;">
+  
+    <div class="col-md-12 col-lg-12 order-md-1 offset-md-2">
+        <h4 class="mb-3">Adicionar curso</h4>
+        <form method="POST" action="/curso/create" class="needs-validation">
+    
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="codigo">Código</label>
+                    <input type="text" class="form-control" id="codigo" name="curso[codigo]" placeholder="Código" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="codigo" name="curso[descricao]" placeholder="Descricao" required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="ch">CH</label>
+                    <input type="text" class="form-control" id="ch" name="curso[ch]" placeholder="CH" required>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" id="categoria" name="curso[categoria]" required>
+                        <option value="DESENVOLVIMENTO">Desenvolvimento</option>
+                        <option value="DESIGN">Design</option>
+                        <option value="REDES">Redes</option>
+                        <option value="ADM">Administrator</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="btn btn-dark btn-lg btn-block" type="submit">Salvar</button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+
+</div>
+
+</body>
+<% include ../includes/scripts %> 
+</html>
